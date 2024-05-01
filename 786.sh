@@ -1,7 +1,8 @@
-C      ALGORITHM 786, COLLECTED ALGORITHMS FROM ACM.
-C      THIS WORK PUBLISHED IN TRANSACTIONS ON MATHEMATICAL SOFTWARE,
-C      VOL. 24,NO. 4,  December, 1998, P.  359--367.
 #! /bin/sh
+# C      ALGORITHM 786, COLLECTED ALGORITHMS FROM ACM.
+# C      THIS WORK PUBLISHED IN TRANSACTIONS ON MATHEMATICAL SOFTWARE,
+# C      VOL. 24,NO. 4,  December, 1998, P.  359--367.
+
 # This is a shell archive, meaning:
 # 1. Remove everything above the #! /bin/sh line.
 # 2. Save the resulting text in a file.
@@ -60334,4 +60335,3 @@ cd ..
 cd ..
 #       End of shell archive
 exit 0
-
