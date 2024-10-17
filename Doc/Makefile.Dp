@@ -1,0 +1,45 @@
+include makefile.inc
+
+all: res1 res2 res3 res4 res5 res6
+
+res1: zmlib.o fmlib.o driver1.o
+	$(F90LINK) $(F90LINKOPTS) zmlib.o fmlib.o driver1.o -o driver1
+	driver1 > res1
+
+res2: zmlib.o fmlib.o driver2.o
+	$(F90LINK) $(F90LINKOPTS) zmlib.o fmlib.o driver2.o -o driver2
+	driver2 > res2
+
+res3: fmlib.o driver3.o
+	$(F90LINK) $(F90LINKOPTS) fmlib.o driver3.o -o driver3
+	driver3 > res3
+
+res4: driver4.o fmlib.o
+	$(F90LINK) $(F90LINKOPTS) driver4.o fmlib.o -o driver4
+	driver4 > res4
+
+res5: fmzmcomm.o fmzm90.o fmlib.o  zmlib.o driver5.o
+	$(F90LINK) $(F90LINKOPTS) fmzmcomm.o fmzm90.o fmlib.o  zmlib.o driver5.o -o driver5
+	driver5 > res5
+
+res6: fmzmcomm.o fmzm90.o fmlib.o  zmlib.o driver6.o
+	$(F90LINK) $(F90LINKOPTS) fmzmcomm.o fmzm90.o fmlib.o  zmlib.o driver6.o -o driver6
+	driver6 > res6
+
+driver1.o: 
+	$(F90) $(F90OPTS) -c driver1.f90
+
+driver2.o: 
+	$(F90) $(F90OPTS) -c driver2.f90
+
+driver3.o: 
+	$(F90) $(F90OPTS) -c driver3.f90
+
+driver4.o: 
+	$(F90) $(F90OPTS) -c driver4.f90
+
+driver5.o: 
+	$(F90) $(F90OPTS) -c driver5.f90
+
+driver6.o: 
+	$(F90) $(F90OPTS) -c driver6.f90
